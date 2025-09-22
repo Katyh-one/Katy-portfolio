@@ -8,5 +8,5 @@ export const ContactController: React.FC = () => {
     if(!data || loading || error) {
         return null;
     }
-  return <ContactView data={data} />;
+  return <ContactView data={data}/>;
 }
