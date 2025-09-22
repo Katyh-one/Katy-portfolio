@@ -1,0 +1,1 @@
+export { AboutController as About } from "./About.controller";

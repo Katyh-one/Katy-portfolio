@@ -21,7 +21,7 @@ export const Box = styled.div`
 `;
 
 export const ContactView: React.FC<ContactViewProps> = ({ data }) => (
-  <Box>
+  <Box id="contact-section">
     <h2>Contact Me</h2>
     {data.map((item, index) => (
       <div key={index}>

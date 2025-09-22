@@ -5,7 +5,7 @@ export const Box = styled.div`
   height: 100px;
   border-radius: 4px;
   background-color: #f8bbd0;
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
   right: 0;
@@ -19,7 +19,7 @@ export const Box = styled.div`
 export const FooterView = () => (
   <footer>
     <Box>
-      <p font-weight="bold">© 2024 Katy Hatch</p>
+      <p style={{ fontWeight: 'bold', fontSize: '25px' }}>© 2024 Katy Hatch</p>
     </Box>
   </footer>
 );
