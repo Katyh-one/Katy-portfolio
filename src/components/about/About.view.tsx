@@ -16,7 +16,6 @@ export const Box = styled.div`
   border-radius: 4px;
   text-align: center;
   color: #7008e7;
-  font-family: 'Arial', sans-serif;
   background-color: #e1bee7;
 `;
 

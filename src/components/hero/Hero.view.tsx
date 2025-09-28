@@ -4,21 +4,21 @@ import styled from 'styled-components';
 
 const Row = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 `;
 
 const ImageBox = styled.div`
   display: flex;
-  flex-shrink: 0;
+  height: auto;
 `;
 
 const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center; 
-    justify-content: center;
+  justify-content: center;
 `;
 
 type HeroViewProps = {
@@ -33,7 +33,7 @@ export const HeroView: React.FC<HeroViewProps> = ({ data }) => (
           <img
             src={item.heroimage.src}
             alt={item.heroimage.alt}
-            style={{ width: '300px', borderRadius: '50%' }}
+            style={{ width: '100%', borderRadius: '50%', maxWidth: '300px' }}
           />
         </ImageBox>
         <TextBox>

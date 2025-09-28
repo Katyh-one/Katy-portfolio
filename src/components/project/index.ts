@@ -1,0 +1,1 @@
+export { ProjectController as Project } from "./Project.controller";

@@ -14,7 +14,7 @@ export type UseHeroContentResult = {
 };
 
 export const useHeroContent = (): UseHeroContentResult => {
-  return {
+return {
     data: [
       {
         heroimage: {
@@ -28,4 +28,4 @@ export const useHeroContent = (): UseHeroContentResult => {
     loading: false,
     error: false
   };
-};
+};  

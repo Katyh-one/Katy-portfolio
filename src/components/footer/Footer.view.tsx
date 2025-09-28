@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Box = styled.div`
   width: 100%;
-  height: 100px;
+  height: 60px;
   border-radius: 4px;
   background-color: #f8bbd0;
   position: static;
@@ -12,7 +12,7 @@ export const Box = styled.div`
   text-align: center;
   color: #7008e7;
   &:hover {
-    background-color: #f48fb1;
+    background-color: #bc92e8;
   }
 `;
 
