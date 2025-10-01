@@ -1,0 +1,1 @@
+export { SkillsController as Skills } from './Skills.controller';

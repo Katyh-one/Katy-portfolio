@@ -1,0 +1,1 @@
+export { HeroController as Hero } from "./Hero.controller";

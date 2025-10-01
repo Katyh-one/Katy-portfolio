@@ -1,37 +1,46 @@
 import React from 'react';
 import type { UseContactResult } from './hook/hook';
-import styled from 'styled-components';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdAttachEmail } from 'react-icons/md';
+import { BsPhoneVibrate } from 'react-icons/bs';
+import { Box } from '@mui/material';
 
 type ContactViewProps = {
   data: UseContactResult['data'];
 };
 
-export const Box = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  text-align: center;
-  color: #7008e7;
-  font-family: 'Arial', sans-serif;
-  background-color: #e1bee7;
-`;
-
 export const ContactView: React.FC<ContactViewProps> = ({ data }) => (
-  <Box>
+  <Box
+    id="contact-section"
+    alignItems="center"
+    display="inline-flex"
+    flexDirection="column"
+    justifyContent="center"
+    padding={4}
+    width="100%"
+    borderRadius={4}
+    textAlign="center"
+    color="#7008e7"
+    bgcolor="#e1bee7"
+  >
     <h2>Contact Me</h2>
     {data.map((item, index) => (
       <div key={index}>
-        <p>{item.email}</p>
-        <p>{item.phone}</p>
         <p>
-          <a href={item.linkedIn}>{item.linkedIn}</a>
+          <MdAttachEmail />
+          {item.email}
         </p>
         <p>
-          <a href={item.github}>{item.github}</a>
+          <BsPhoneVibrate />
+          {item.phone}
+        </p>
+        <p>
+          <FaLinkedin />
+          <a href={item.linkedIn}>LinkedIn</a>
+        </p>
+        <p>
+          <FaGithub />
+          <a href={item.github}>Github</a>
         </p>
       </div>
     ))}
