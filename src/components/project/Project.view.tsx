@@ -1,27 +1,26 @@
 import React from 'react';
 import type { UseProjectContentResult } from './hook/hook';
-import styled from 'styled-components';
-
+import { Box } from '@mui/material';
 
 type ProjectViewProps = {
   data: UseProjectContentResult['data'];
 };
 
-export const Box = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  text-align: center;
-  color: #7008e7;
-  background-color: #e1bee7;
-`;
 
 export const ProjectView: React.FC<ProjectViewProps> = ({ data }) => (
-  <Box id="contact-section">
+  <Box
+    id="contact-section"
+    alignItems="center"
+    display="inline-flex"
+    flexDirection="column"
+    justifyContent="center"
+    padding={4}
+    width="100%"
+    borderRadius={4}
+    textAlign="center"
+    color="#7008e7"
+    bgcolor="#e1bee7"
+  >
     <h2>My Projects</h2>
     {data.map((item, index) => (
       <div key={index}>

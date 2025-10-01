@@ -26,8 +26,10 @@ const App = () => (
         <Grid size={12}>
           <Project />
         </Grid>
+        <Grid size={12}>
+          <Footer />
+        </Grid>
       </Grid>
-      <Footer />
     </Container>
   </div>
 );

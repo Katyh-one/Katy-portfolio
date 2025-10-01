@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import Grid  from '@mui/material/Grid';
 import React from 'react';
-import styled from 'styled-components';
 
 export type SkillsViewProps = {
   data: {
@@ -10,22 +9,20 @@ export type SkillsViewProps = {
   };
 };
 
-const SkillsBox = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  text-align: center;
-  color: #7008e7;
-  background-color: #e892be;
-`;
-
 export const SkillsView: React.FC<SkillsViewProps> = ({ data }) => {
   return (
-    <SkillsBox>
+    <Box
+        id="skills-section"
+        alignItems="center"
+        display="inline-flex"
+        flexDirection="column"
+        justifyContent="center"
+        padding={4}
+        width="100%"
+        borderRadius={4}
+        textAlign="center"
+        color="#7008e7"
+        bgcolor="#e1bee7">
       <h2>Skills</h2>
       <h3>Languages</h3>
       <Box
@@ -74,6 +71,6 @@ export const SkillsView: React.FC<SkillsViewProps> = ({ data }) => {
           </Box>
         ))}
       </Box>
-    </SkillsBox>
+    </Box>
   );
 };
